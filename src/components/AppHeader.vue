@@ -8,6 +8,4 @@ export default {
         <h1>Boolflix</h1>
     </div>
 </template>
-<style lang="">
-    
-</style>
+<style lang="scss" scoped></style>

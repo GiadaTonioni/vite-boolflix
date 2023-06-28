@@ -17,11 +17,9 @@ export default {
 <template lang="">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="col-4" v-for="(movie, index) in movieList" :key="movie.id">
+                <div class="col-4" v-for="(movie, index) in store.movieList" :key="movie.id">
                     <AppMovieCard :myMovie="movie" />
                 </div>
-            </div>
         </div>
         
     </div>
