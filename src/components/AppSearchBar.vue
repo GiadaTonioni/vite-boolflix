@@ -33,6 +33,6 @@ export default {
 }
 
 .ricerca {
-    margin: 40px;
+    padding: 50px;
 }
 </style>
