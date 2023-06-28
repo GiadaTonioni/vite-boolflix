@@ -22,13 +22,18 @@ export default {
     axios.get(store.apiUrl).then((response) => {
       store.movieList = response.data.results;
     })
+  },
+  methods: {
+    filterMovie(word) {
+      console.log(word)
+    }
   }
 }
 </script>
 <template lang="">
   <div>
     <AppHeader/>
-    <AppSearchBar/>
+    <AppSearchBar @search="filterMovie" />
     <AppMain/>
   </div>
 </template>
