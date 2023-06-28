@@ -7,6 +7,7 @@ export default {
 </script>
 <template lang="">
     <div class="card">
+        <img :src="`https://image.tmdb.org/t/p/w342/${myMovie.poster_path}`" alt="">
         <h3>{{myMovie.title}}</h3>
         <h4>{{myMovie.original_title}}</h4>
         <h4>{{myMovie.original_language}}</h4>
