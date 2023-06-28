@@ -27,7 +27,7 @@ export default {
       let myUrl = store.apiUrl;
 
       if (store.searchMovie !== '') {
-        myUrl += `title=${store.searchMovie}`;
+        myUrl += `?title=${store.searchMovie}`;
       }
 
       axios.get(myUrl).then((response) => {
