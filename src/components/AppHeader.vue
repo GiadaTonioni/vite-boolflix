@@ -4,8 +4,17 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        <h1>Boolflix</h1>
+    <div class="container">
+        <h1>BoolfliX</h1>
     </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+.container {
+    background-color: black;
+}
+</style>
