@@ -1,15 +1,15 @@
 <script>
+import { store } from '../store.js';
+
 export default {
     data() {
         return {
-            searchMovie: ''
+            store
         }
     },
     methods: {
-        sendSearch() {
-            console.log(this.searchMovie)
-        }
-    },
+
+    }
 }
 </script>
 
@@ -18,8 +18,8 @@ export default {
         <div class="row">
             <div class="col-12">
                 <div class="ricerca d-flex justify-content-center">
-                    <input type="text" v-model="searchMovie" class="form-control barra" placeholder="Search Movie..." @keyup.enter="$emit('search', searchMovie)">
-                    <button class="btn btn-primary" @click="$emit('search', searchMovie)">Search</button>
+                    <input type="text" v-model="store.searchMovie" class="form-control barra" placeholder="Search Movie..." @keyup.enter="$emit('search')">
+                    <button class="btn btn-primary" @click="$emit('search')">Search</button>
                 </div>
             </div>
         </div>

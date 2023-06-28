@@ -19,13 +19,20 @@ export default {
     }
   },
   mounted() {
-    axios.get(store.apiUrl).then((response) => {
-      store.movieList = response.data.results;
-    })
+    this.getMovie()
   },
   methods: {
-    filterMovie(word) {
-      console.log(word)
+    getMovie() {
+
+      let myUrl = store.apiUrl;
+
+      if (store.searchMovie !== '') {
+        myUrl += `title=${store.searchMovie}`;
+      }
+
+      axios.get(myUrl).then((response) => {
+        store.movieList = response.data.results;
+      })
     }
   }
 }
@@ -33,7 +40,7 @@ export default {
 <template lang="">
   <div>
     <AppHeader/>
-    <AppSearchBar @search="filterMovie" />
+    <AppSearchBar @search="getMovie" />
     <AppMain/>
   </div>
 </template>
