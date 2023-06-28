@@ -1,17 +1,17 @@
 <script>
-import axios from 'axios';
+import AppMovieCard from './AppMovieCard.vue';
+import { store } from '../store.js';
 
 export default {
+    components: {
+        AppMovieCard
+    },
     data() {
         return {
-            movieList: []
+            store
         }
     },
-    mounted() {
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=game+of+thrones').then((response) => {
-            this.movieList = response.data.results
-        })
-    }
+
 }
 </script>
 <template lang="">
@@ -19,13 +19,11 @@ export default {
         <div class="row">
             <div class="col">
                 <div class="col-4" v-for="(movie, index) in movieList" :key="movie.id">
-                {{movie.original_title}}
+                    <AppMovieCard :myMovie="movie" />
                 </div>
             </div>
         </div>
         
     </div>
 </template>
-<style lang="">
-    
-</style>
+<style lang="scss" scoped></style>
