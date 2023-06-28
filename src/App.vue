@@ -19,7 +19,7 @@ export default {
     }
   },
   mounted() {
-    this.getMovie()
+
   },
   methods: {
     getMovie() {
@@ -27,11 +27,12 @@ export default {
       let myUrl = store.apiUrl;
 
       if (store.searchMovie !== '') {
-        myUrl += `?title=${store.searchMovie}`;
+        myUrl += `&query=${store.searchMovie}`;
       }
 
       axios.get(myUrl).then((response) => {
         store.movieList = response.data.results;
+        console.log(store.movieList)
       })
     }
   }
@@ -40,7 +41,7 @@ export default {
 <template lang="">
   <div>
     <AppHeader/>
-    <AppSearchBar @search="getMovie" />
+    <AppSearchBar @search="getMovie()"  />
     <AppMain/>
   </div>
 </template>
