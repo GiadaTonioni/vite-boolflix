@@ -1,11 +1,13 @@
 <script>
 export default {
-
+    props: {
+        myMovie: Object
+    }
 }
 </script>
 <template lang="">
     <div class="card">
-        <img :src="myMovie.poster_path" class="img-fluid" :alt="myMovie.info">
+        <img src="" alt="">
         <h4>{{myMovie.original_title}}</h4>
     </div>
 </template>

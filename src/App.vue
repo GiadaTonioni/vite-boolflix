@@ -3,12 +3,15 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 
+import AppSearchBar from './components/AppSearchBar.vue'
+
 import { store } from './store.js';
 
 export default {
   components: {
     AppHeader,
     AppMain,
+    AppSearchBar
   },
   data() {
     return {
@@ -17,7 +20,7 @@ export default {
   },
   mounted() {
     axios.get(store.apiUrl).then((response) => {
-      this.movieList = response.data.results;
+      store.movieList = response.data.results;
     })
   }
 }
@@ -25,6 +28,7 @@ export default {
 <template lang="">
   <div>
     <AppHeader/>
+    <AppSearchBar/>
     <AppMain/>
   </div>
 </template>
