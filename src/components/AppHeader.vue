@@ -5,7 +5,7 @@ export default {
 </script>
 <template lang="">
     <div class="container">
-        <h1>BoolfliX</h1>
+        <h1><strong>BOOLFLIX</strong></h1>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -16,5 +16,6 @@ h1 {
 
 .container {
     background-color: black;
+    padding: 20px;
 }
 </style>
