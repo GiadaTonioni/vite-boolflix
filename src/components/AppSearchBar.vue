@@ -19,7 +19,7 @@ export default {
             <div class="col-12">
                 <div class="ricerca d-flex justify-content-center">
                     <input type="text" v-model="store.searchMovie" class="form-control barra" placeholder="Search Movie..." @keyup.enter="$emit('search')">
-                    <button class="btn btn-primary" @click="$emit('search')">Search</button>
+                    <button class="btn btn-primary" @click="$emit('search')"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </div>

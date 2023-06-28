@@ -1,5 +1,5 @@
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
-@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
@@ -9,6 +9,6 @@
 }
 
 body {
-    background-color: grey;
+    background-color: rgb(42, 42, 42);
     font-family: 'Bebas Neue', sans-serif;
 }

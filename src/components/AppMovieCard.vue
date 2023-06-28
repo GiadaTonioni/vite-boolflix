@@ -37,6 +37,7 @@ export default {
     width: 342px;
     margin-bottom: 25px;
     background-color: lightgray;
+    border: 2px solid black;
 }
 
 .poster {
