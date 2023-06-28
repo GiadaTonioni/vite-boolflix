@@ -8,7 +8,7 @@ import { store } from './store.js';
 export default {
   components: {
     AppHeader,
-    AppMain
+    AppMain,
   },
   data() {
     return {

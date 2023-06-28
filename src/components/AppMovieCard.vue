@@ -1,8 +1,6 @@
 <script>
 export default {
-    props: {
-        myMovie: Object
-    }
+
 }
 </script>
 <template lang="">
