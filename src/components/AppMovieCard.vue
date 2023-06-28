@@ -7,7 +7,6 @@ export default {
 </script>
 <template lang="">
     <div class="card">
-        <img src="" alt="">
         <h3>{{myMovie.title}}</h3>
         <h4>{{myMovie.original_title}}</h4>
         <h4>{{myMovie.original_language}}</h4>
